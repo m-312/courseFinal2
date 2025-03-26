@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="560.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.templatemodule2.coursesController">
+   <children>
+      <Rectangle arcWidth="5.0" fill="#e3e7eb" height="446.0" layoutY="132.0" stroke="#ffffff00" strokeType="INSIDE" width="174.0" />
+      <Rectangle arcWidth="5.0" height="153.0" layoutX="-52.0" layoutY="-21.0" stroke="#080707d5" strokeType="INSIDE" width="907.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6143549084663391" green="0.6917945742607117" blue="0.7434210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <MenuButton fx:id="menuBar" layoutX="-2.0" layoutY="132.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Features">
+        <items>
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="menuBar1" layoutX="-2.0" layoutY="163.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Modules">
+         <items>
+            <MenuItem fx:id="subjectManagmentButton" mnemonicParsing="false" onAction="#onSubjectManagmentButton" text="Subject Managment" />
+            <MenuItem fx:id="courseManagmentButton" mnemonicParsing="false" onAction="#onCourseManagmentButton" text="Course Managment" />
+            <MenuItem fx:id="studentManagmentButton" mnemonicParsing="false" onAction="#onStudentManagmentButton" text="Student Managment" />
+            <MenuItem fx:id="facuiltyManagmentButton" mnemonicParsing="false" onAction="#onFacuiltyManagmentButton" text="Facuilty Managment" />
+            <MenuItem fx:id="eventManagmentButton" mnemonicParsing="false" onAction="#onEventManagmentButton" text="Event Managment" />
+         </items>
+      </MenuButton>
+      <Rectangle arcWidth="5.0" fill="#c1c1c1" height="446.0" layoutX="167.0" layoutY="132.0" stroke="#ffffff00" strokeType="INSIDE" width="9.0" />
+           <Label fx:id="userTypeLabel" contentDisplay="RIGHT" layoutX="725.0" layoutY="22.0" prefHeight="39.0" prefWidth="123.0" text="userTypeLabel">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Text fx:id="nameLabel" fill="WHITE" layoutX="22.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sample name">
+         <font>
+            <Font name="Candara" size="64.0" />
+         </font>
+      </Text>
+      <Label fx:id="contentLabel" alignment="TOP_CENTER" layoutX="230.0" layoutY="219.0" prefHeight="292.0" prefWidth="520.0" text="contentLabel">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="subLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="151.0" prefHeight="46.0" prefWidth="520.0" text="Courses">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Group layoutX="202.0" layoutY="221.0">
+         <children>
+            <AnchorPane layoutX="-1.0" layoutY="-2.0" prefHeight="329.0" prefWidth="637.0">
+               <children>
+                  <ScrollPane fx:id="spaneall" prefHeight="328.0" prefWidth="630.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="904.0" prefWidth="613.0">
+                           <children>
+                              <Accordion prefHeight="328.0" prefWidth="626.0">
+                                <panes>
+                                  <TitledPane fx:id="tpaneOne" animated="false" maxHeight="150.0" minHeight="100.0" prefHeight="139.0" prefWidth="626.0" text="untitled">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneOne" prefHeight="124.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="606.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneOneText" layoutX="6.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="593.470085144043" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane fx:id="tpaneTwo" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneTwo" prefHeight="126.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="607.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneTwoText" layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="596.8034439086914" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                    <TitledPane fx:id="tpaneThree" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                      <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneThree" prefHeight="123.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="608.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneThreeText" layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="597.3333129882814" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                      </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneFour" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneFour" prefHeight="125.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="609.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneFourText" layoutX="5.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="598.1368026733398" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneFive" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneFive" prefHeight="125.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="609.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneFiveText" layoutX="2.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="604.1367721557617" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneSix" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneSix" prefHeight="125.0" prefWidth="625.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="607.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneSixText" layoutX="11.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="585.9999999999999" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneSeven" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneSeven" layoutX="-1.0" layoutY="-1.0" prefHeight="127.0" prefWidth="626.0">
+                                                   <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="610.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneSevenText" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="562.8034133911133" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                  <TitledPane fx:id="tpaneEight" animated="false" maxHeight="150.0" minHeight="100.0" prefHeight="138.0" prefWidth="626.0" text="Class 1">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneEight" layoutY="-1.0" prefHeight="126.0" prefWidth="626.0">
+                                                  <content>
+                                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="590.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneEightText" layoutX="14.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="574.8034591674805" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                  </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                    <TitledPane fx:id="tpaneNine" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneSeven1" layoutX="-1.0" layoutY="-1.0" prefHeight="127.0" prefWidth="626.0">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="610.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneNineText" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="562.8034133911133" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                    <TitledPane fx:id="tpaneTen" animated="false" maxHeight="150.0" minHeight="100.0" text="untitled">
+                                       <content>
+                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <ScrollPane fx:id="spaneSeven2" layoutX="-1.0" layoutY="-1.0" prefHeight="127.0" prefWidth="626.0">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="610.0">
+                                                         <children>
+                                                            <Text fx:id="tpaneTenText" layoutX="14.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="562.8034133911133" />
+                                                         </children>
+                                                      </AnchorPane>
+                                                   </content>
+                                                </ScrollPane>
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </TitledPane>
+                                </panes>
+                              </Accordion>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </Group>
+      <Button fx:id="searchButton" layoutX="350.0" layoutY="177.0" mnemonicParsing="false" onAction="#onSearchButton" text="Search" />
+      <TextField fx:id="searchTextField" layoutX="195.0" layoutY="177.0" />
+      <Label fx:id="labelOne" layoutX="190.0" layoutY="139.0" prefHeight="17.0" prefWidth="586.0" text="Label" />
+      <Button fx:id="addCourseButton" layoutX="691.0" layoutY="177.0" mnemonicParsing="false" onAction="#onAddCourseButton" prefHeight="25.0" prefWidth="59.0" text="Add" />
+      <Button fx:id="removeCourseButton" layoutX="628.0" layoutY="177.0" mnemonicParsing="false" onAction="#onRemoveCourseButton" text="Remove" />
+      <Button fx:id="courseEditButton" layoutX="753.0" layoutY="177.0" mnemonicParsing="false" onAction="#onCourseEditButton" prefHeight="25.0" prefWidth="59.0" text="Edit" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="577.0" prefWidth="855.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.templatemodule2.facuiltyController">
+   <children>
+      <Rectangle arcWidth="5.0" fill="#e3e7eb" height="446.0" layoutY="132.0" stroke="#ffffff00" strokeType="INSIDE" width="174.0" />
+      <Rectangle arcWidth="5.0" height="153.0" layoutX="-52.0" layoutY="-21.0" stroke="#080707d5" strokeType="INSIDE" width="907.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.6143549084663391" green="0.6917945742607117" blue="0.7434210777282715" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <MenuButton fx:id="menuBar" layoutX="-2.0" layoutY="132.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Features">
+        <items>
+          <MenuItem fx:id="facuiltyListButton" mnemonicParsing="false" onAction="#onFacuiltyListButton" text="Facuilty List" />
+          <MenuItem fx:id="studentListButton" mnemonicParsing="false" onAction="#onStudentListButton" text="Add Facuilty" />
+        </items>
+      </MenuButton>
+      <MenuButton fx:id="menuBar1" layoutX="-2.0" layoutY="163.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="174.0" text="Modules">
+         <items>
+            <MenuItem fx:id="subjectManagmentButton" mnemonicParsing="false" onAction="#onSubjectManagmentButton" text="Subject Managment" />
+            <MenuItem fx:id="courseManagmentButton" mnemonicParsing="false" onAction="#onCourseManagmentButton" text="Course Managment" />
+            <MenuItem fx:id="studentManagmentButton" mnemonicParsing="false" onAction="#onStudentManagmentButton" text="Student Managment" />
+            <MenuItem fx:id="facuiltyManagmentButton" mnemonicParsing="false" onAction="#onFacuiltyManagmentButton" text="Facuilty Managment" />
+            <MenuItem fx:id="eventManagmentButton" mnemonicParsing="false" onAction="#onEventManagmentButton" text="Event Managment" />
+         </items>
+      </MenuButton>
+      <Rectangle arcWidth="5.0" fill="#c1c1c1" height="446.0" layoutX="167.0" layoutY="132.0" stroke="#ffffff00" strokeType="INSIDE" width="9.0" />
+           <Label fx:id="userTypeLabel" contentDisplay="RIGHT" layoutX="725.0" layoutY="22.0" prefHeight="39.0" prefWidth="123.0" text="userTypeLabel">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Text fx:id="nameLabel" fill="WHITE" layoutX="22.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sample name">
+         <font>
+            <Font name="Candara" size="64.0" />
+         </font>
+      </Text>
+      <Label fx:id="subLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="132.0" prefHeight="53.0" prefWidth="212.0" text="subLabel">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Group fx:id="group" layoutX="202.0" layoutY="221.0">
+         <children>
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="23.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="69.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="92.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="115.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="138.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="161.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="184.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="207.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="230.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="253.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#d0d0d0" height="23.0" layoutY="276.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" fill="#9e9e9e" height="23.0" layoutY="299.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="625.0" />
+            <Rectangle arcWidth="5.0" height="324.0" layoutX="-1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+            <Rectangle arcWidth="5.0" height="324.0" layoutX="624.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="1.0" />
+            <Rectangle arcWidth="5.0" height="625.0" layoutX="311.0" layoutY="9.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+            <Rectangle arcWidth="5.0" height="625.0" layoutX="311.0" layoutY="-313.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="2.0" />
+            <Label fx:id="labelOne" layoutX="19.0" layoutY="4.0" onMouseClicked="#onlabelOne" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelTwo" layoutX="19.0" layoutY="26.0" onMouseClicked="#onlabelTwo" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelThree" layoutX="19.0" layoutY="49.0" onMouseClicked="#onlabelThree" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelFour" layoutX="19.0" layoutY="72.0" onMouseClicked="#onlabelFour" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelFive" layoutX="19.0" layoutY="95.0" onMouseClicked="#onlabelFive" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelSix" layoutX="19.0" layoutY="118.0" onMouseClicked="#onlabelSix" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelSeven" layoutX="19.0" layoutY="141.0" onMouseClicked="#onlabelSeven" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelEight" layoutX="19.0" layoutY="164.0" onMouseClicked="#onlabelEight" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelNine" layoutX="19.0" layoutY="187.0" onMouseClicked="#onlabelNine" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelTen" layoutX="19.0" layoutY="210.0" onMouseClicked="#onlabelTen" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelEleven" layoutX="20.0" layoutY="233.0" onMouseClicked="#onlabelEleven" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelTweleve" layoutX="19.0" layoutY="256.0" onMouseClicked="#onlabelTwelve" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelThirteen" layoutX="19.0" layoutY="279.0" onMouseClicked="#onlabelThirteen" prefHeight="17.0" prefWidth="586.0" text="Label" />
+            <Label fx:id="labelFourteen" layoutX="19.0" layoutY="301.0" onMouseClicked="#onlabelFourteen" prefHeight="17.0" prefWidth="586.0" text="Label" />
+         </children>
+      </Group>
+      <Button fx:id="searchButton" layoutX="386.0" layoutY="179.0" mnemonicParsing="false" onAction="#onSearchButton" text="Search" visible="false" />
+      <TextField fx:id="searchTextField" layoutX="201.0" layoutY="179.0" prefHeight="25.0" prefWidth="180.0" visible="false" />
+      <Button fx:id="editButton" layoutX="387.0" layoutY="146.0" mnemonicParsing="false" text="Edit" visible="false" />
+      <Group fx:id="feildsGroup" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="327.0" layoutX="426.0" layoutY="206.0" stroke="BLACK" strokeType="INSIDE" width="333.0">
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.7740466594696045" green="0.8398023843765259" blue="0.9013158082962036" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </Rectangle>
+            <TextField fx:id="nameBox" layoutX="194.0" layoutY="207.0" />
+            <Label fx:id="name2Label" layoutX="194.0" layoutY="187.0" text="Name" />
+            <TextField fx:id="degreeBox" layoutX="194.0" layoutY="262.0" />
+            <Label fx:id="degreeLabel" layoutX="194.0" layoutY="242.0" text="Degree" />
+            <TextField fx:id="researchBox" layoutX="194.0" layoutY="317.0" />
+            <Label fx:id="researchLabel" layoutX="194.0" layoutY="297.0" text="Research" />
+            <TextField fx:id="expertiseBox" disable="true" layoutX="194.0" layoutY="372.0" visible="false" />
+            <Label fx:id="expertiseLabel" disable="true" layoutX="194.0" layoutY="352.0" text="Expertise" visible="false" />
+            <TextField fx:id="coursesOfferedBox" layoutX="194.0" layoutY="427.0" />
+            <Label fx:id="coursesLabel" layoutX="194.0" layoutY="407.0" text="Courses Offered" />
+            <TextField fx:id="emailBox" layoutX="194.0" layoutY="482.0" />
+            <Label fx:id="emailLabel" layoutX="194.0" layoutY="462.0" text="Email" />
+            <TextField fx:id="officeLocationBox" layoutX="194.0" layoutY="372.0" />
+            <Label fx:id="officeLabel" layoutX="194.0" layoutY="352.0" text="Office Location" />
+            <ImageView fx:id="imageBox" fitHeight="292.0" fitWidth="304.0" layoutX="442.0" layoutY="223.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/profileImage.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="changeImageButton" layoutX="481.0" layoutY="537.0" mnemonicParsing="false" onAction="#onChangeImageButton" text="Change Image" />
+            <Button fx:id="addButton" layoutX="655.0" layoutY="537.0" mnemonicParsing="false" onAction="#onAddButton" text="Add" />
+         </children>
+      </Group>
+   </children>
+</AnchorPane>
