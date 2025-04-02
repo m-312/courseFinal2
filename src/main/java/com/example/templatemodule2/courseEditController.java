@@ -68,17 +68,15 @@ public class courseEditController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        int m = 0;
          for(int i = 0; i < courseNameList.length; i++) {
-            courseNameList[m] = main.courses[i].getCourseName();
-            courseCodeList[m] = main.courses[i].getCourseCode();
-            courseSectionList[m] = main.courses[i].getCourseSection();
-            courseCapacityList[m] = main.courses[i].getCourseCapacity();
-            courseLectureList[m] = main.courses[i].getCourseLecture();
-            courseFinalList[m] = main.courses[i].getCourseFinal();
-            courseLocationList[m] = main.courses[i].getCourseLocation();
-            courseTeacherList[m] = main.courses[i].getCourseTeacher();
-            m++;
+            courseNameList[i] = main.courses[i].getCourseName();
+            courseCodeList[i] = main.courses[i].getCourseCode();
+            courseSectionList[i] = main.courses[i].getCourseSection();
+            courseCapacityList[i] = main.courses[i].getCourseCapacity();
+            courseLectureList[i] = main.courses[i].getCourseLecture();
+            courseFinalList[i] = main.courses[i].getCourseFinal();
+            courseLocationList[i] = main.courses[i].getCourseLocation();
+            courseTeacherList[i] = main.courses[i].getCourseTeacher();
         }
 
         editCourseOne.setText(courseNameList[0]);

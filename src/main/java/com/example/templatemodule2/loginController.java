@@ -1,3 +1,4 @@
+
 package com.example.templatemodule2;
 
 import javafx.fxml.FXML;
@@ -63,7 +64,7 @@ public class loginController {
         Stage currentStage = (Stage) userTextBox.getScene().getWindow();
         main.switchScene(currentStage, "facuiltyManagment");
     }
-    else if (userTextBox.getText().equals("admin") && passTextBox.getText().equals("54321"))
+    else if (userTextBox.getText().equals("a") && passTextBox.getText().equals("a"))
         {
             main.userType = 'a';
             Stage currentStage = (Stage) userTextBox.getScene().getWindow();

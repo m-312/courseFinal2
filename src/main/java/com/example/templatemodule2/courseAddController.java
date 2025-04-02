@@ -4,7 +4,7 @@ package com.example.templatemodule2;
 import com.example.templatemodule2.essential.course;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
+//import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -15,7 +15,7 @@ import java.net.URL;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
-public class courseAddController implements Initializable {
+public class courseAddController {
     public TextField courseNameText;
     public TextField courseCodeText;
     public TextField capacityText;
@@ -30,7 +30,7 @@ public class courseAddController implements Initializable {
     String capacity;
 
 
-
+    /*
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         main.courses[0] = new course("1","Calculus 1","1","30","Mon/Wed 9-11AM", "2025-12-15 9:00", "101", "Dr. Alan Turing");
@@ -40,6 +40,7 @@ public class courseAddController implements Initializable {
         main.courses[4] = new course("5","Introduction to French","1","25","Tue/Thur 4:30-5:30","2025-12-13 10:00","202","Dr. Lakyn Copeland");
         main.courses[5] = new course("6","Water Resources","1","50","Mon/Fri 9:00-10:30 AM","2025-12-01 9:00", "203", "Dr. Albozr Gharabaghi");
     }
+     */
 
     @FXML
     protected void onSubmitCourseButton() {

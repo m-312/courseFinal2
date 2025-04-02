@@ -4,13 +4,12 @@ public class course extends subject{
     public String name;
     public String code;
     public String sectionNumber;
-    public String teacherName;
     public String  capacity;
-    public String lecTime; //formatted Daay Hour:Min 24 hour time
+    public String lecTime; //formatted Day Hour:Min 24 hour time
     public String examDate;// /M/D/Y H:M w4 hour time
     public String location;
     public String teacher;
-    public static int courseCounter = 5;
+    public static int courseCounter = 6;
 
 
     public course(String courseCode, String courseName, String section, String capacity, String lecture, String finalExam, String location, String teacher) {
@@ -68,21 +67,35 @@ public class course extends subject{
         printer += "\nLecture: " + lecTime;
         printer += "\nFinal Exam: " + examDate;
         printer += "\nLocation: Room " + location;
-        printer += "\nTeacher: " + teacher;
+        printer += "\nTeacher: " + teacher + "\n";
 
         return printer;
     }
 
-    public void wipe ()
-    {
+    public String sectionInfo() {
+        String printer = "";
+
+        printer += "\nSection: " + sectionNumber;
+        printer += "\nCapacity: " + capacity;
+        printer += "\nLecture: " + lecTime;
+        printer += "\nFinal Exam: " + examDate;
+        printer += "\nLocation: Room " + location;
+        printer += "\nTeacher: " + teacher + "\n";
+
+        return printer;
+    }
+
+    /*
+    public void wipe () {
         name = "";
         code = "";
         sectionNumber= "";
         teacherName= "";
         capacity= "";
-        lecTime= ""; //formatted Daay Hour:Min 24 hour time
-        examDate= "";// /M/D/Y H:M w4 hour time
+        lecTime= ""; //formatted Day Hour:Min 24 hour time
+        examDate= "";// /M/D/Y H:M 24 hour time
         location= "";
         teacher= "";
     }
+     */
 }

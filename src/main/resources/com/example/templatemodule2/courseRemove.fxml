@@ -2,11 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.templatemodule2.courseRemoveController">
    <children>
@@ -16,12 +17,34 @@
             <Font size="38.0" />
          </font>
       </Label>
-      <TextField fx:id="removeCourseText" layoutX="38.0" layoutY="159.0" prefHeight="25.0" prefWidth="255.0" />
-      <TextField fx:id="removeSectionText" layoutX="341.0" layoutY="159.0" prefHeight="25.0" prefWidth="255.0" />
-      <Label layoutX="38.0" layoutY="141.0" text="Course Code" />
-      <Label layoutX="341.0" layoutY="141.0" text="Section Number" />
-      <Button fx:id="removeCourseSubmitButton" layoutX="496.0" layoutY="213.0" mnemonicParsing="false" onAction="#onRemoveCourseSubmitButton" prefHeight="25.0" prefWidth="99.0" text="Submit" />
-      <Button fx:id="removeCourseBackButton" layoutX="38.0" layoutY="213.0" mnemonicParsing="false" onAction="#onRemoveCourseBackButton" text="Back" />
-      <Label fx:id="statusLabel" layoutX="262.0" layoutY="217.0" text="Status: Enter Course" />
+      <Label layoutX="38.0" layoutY="119.0" prefHeight="17.0" prefWidth="311.0" text="Please select the course that you would like to remove." />
+      <Button fx:id="removeCourseSubmitButton" layoutX="497.0" layoutY="231.0" mnemonicParsing="false" onAction="#onRemoveCourseSubmitButton" prefHeight="25.0" prefWidth="99.0" text="Submit" />
+      <Button fx:id="removeCourseBackButton" layoutX="38.0" layoutY="231.0" mnemonicParsing="false" onAction="#onRemoveCourseBackButton" text="Back" />
+      <MenuButton fx:id="removeMenuButton" layoutX="38.0" layoutY="145.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="559.0">
+        <items>
+          <MenuItem fx:id="removeMenu1" mnemonicParsing="false" onAction="#onRemoveMenu1" text="Action" />
+          <MenuItem fx:id="removeMenu2" mnemonicParsing="false" onAction="#onRemoveMenu2" text="Action" />
+            <MenuItem fx:id="removeMenu3" mnemonicParsing="false" onAction="#onRemoveMenu3" text="Action" />
+            <MenuItem fx:id="removeMenu4" mnemonicParsing="false" onAction="#onRemoveMenu4" text="Action" />
+            <MenuItem fx:id="removeMenu5" mnemonicParsing="false" onAction="#onRemoveMenu5" text="Action" />
+            <MenuItem fx:id="removeMenu6" mnemonicParsing="false" onAction="#onRemoveMenu6" text="Action" />
+            <MenuItem fx:id="removeMenu7" mnemonicParsing="false" onAction="#onRemoveMenu7" text="Action" />
+            <MenuItem fx:id="removeMenu8" mnemonicParsing="false" onAction="#onRemoveMenu8" text="Action" />
+            <MenuItem fx:id="removeMenu9" mnemonicParsing="false" onAction="#onRemoveMenu9" text="Action" />
+            <MenuItem fx:id="removeMenu10" mnemonicParsing="false" onAction="#onRemoveMenu10" text="Action" />
+        </items>
+      </MenuButton>
+      <Label fx:id="removeCourseStatus" layoutX="218.0" layoutY="235.0" text="Course deleted successfully" />
+      <MenuButton fx:id="removeSectionMenu" layoutX="38.0" layoutY="187.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="559.0">
+         <items>
+            <MenuItem fx:id="removeSectionMAll" mnemonicParsing="false" onAction="#onRemoveSectionMAll" text="Action" />
+            <MenuItem fx:id="removeSectionM1" mnemonicParsing="false" onAction="#onRemoveSectionM1" text="Action" />
+            <MenuItem fx:id="removeSectionM2" mnemonicParsing="false" onAction="#onRemoveSectionM2" text="Action" />
+            <MenuItem fx:id="removeSectionM3" mnemonicParsing="false" onAction="#onRemoveSectionM3" text="Action" />
+            <MenuItem fx:id="removeSectionM4" mnemonicParsing="false" onAction="#onRemoveSectionM4" text="Action" />
+            <MenuItem fx:id="removeSectionM5" mnemonicParsing="false" onAction="#onRemoveSectionM5" text="Action" />
+         </items>
+      </MenuButton>
+      <Text fx:id="testText" layoutX="165.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
    </children>
 </AnchorPane>
