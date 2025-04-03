@@ -1,5 +1,6 @@
 package com.example.templatemodule2;
 
+import com.example.templatemodule2.essential.course;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -18,6 +19,7 @@ import java.util.ResourceBundle;
 import static com.example.templatemodule2.coursesController.*;
 
 public class courseRemoveController implements Initializable {
+    // Initialize page buttons
     @FXML
     public Button removeCourseBackButton;
     @FXML
@@ -25,6 +27,7 @@ public class courseRemoveController implements Initializable {
     @FXML
     public Label removeCourseStatus;
 
+    // Initialize course menu and options
     @FXML
     public MenuButton removeMenuButton;
     @FXML
@@ -48,6 +51,7 @@ public class courseRemoveController implements Initializable {
     @FXML
     public MenuItem removeMenu10;
 
+    // Initialize section menu and options
     @FXML
     public MenuButton removeSectionMenu;
     @FXML
@@ -62,16 +66,16 @@ public class courseRemoveController implements Initializable {
     public MenuItem removeSectionM5;
     @FXML
     public MenuItem removeSectionMAll;
-    @FXML
-    public Text testText;
 
-
+    // Define strings for the user choices
     String userChoiceCourse;
-    String userChoiceSection = "";
+    String userChoiceSection;
+
+    // Initialize menu arrays to use in for-loops
     MenuItem[] menuItems = new MenuItem[10];
     MenuItem[] sectionMenu = new MenuItem[6];
 
-    //Initialize the page view
+    // Initialize the page view
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // Create array of menu items for the remove course menu to use in a for-loop
@@ -119,28 +123,22 @@ public class courseRemoveController implements Initializable {
         for(int i = 0; i < 6; i++){
             sectionMenu[i].setVisible(false);
         }
-
-        String test = "";
-        for(int i = 0; i < main.courses.length;i++){
-            test += main.courses[i].getCourseName() + " | " + courseNameList[i] + " | " + courseSectionsList[i] + "\n";
-        }
-
-        testText.setText(test);
-
-
     }
 
-
+    // First course
     @FXML
     protected void onRemoveMenu1(){
         removeCourseStatus.setVisible(false);
         userChoiceCourse = menuItems[0].getText(); // User has chosen course 1
         removeMenuButton.setText(menuItems[0].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[0] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[0]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -149,23 +147,26 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
-
-
     }
 
     @FXML
     protected void onRemoveMenu2(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[1].getText();
-        removeMenuButton.setText(menuItems[1].getText());
+        userChoiceCourse = menuItems[1].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[1].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[1] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[1]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -174,7 +175,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -182,13 +185,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu3(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[2].getText();
-        removeMenuButton.setText(menuItems[2].getText());
+        userChoiceCourse = menuItems[2].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[2].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[2] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[2]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -197,7 +203,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -205,13 +213,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu4() {
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[3].getText();
-        removeMenuButton.setText(menuItems[3].getText());
+        userChoiceCourse = menuItems[3].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[3].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[3] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[3]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -220,7 +231,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -228,13 +241,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu5(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[4].getText();
-        removeMenuButton.setText(menuItems[4].getText());
+        userChoiceCourse = menuItems[4].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[4].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[4] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[4]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -243,7 +259,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -251,13 +269,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu6(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[5].getText();
-        removeMenuButton.setText(menuItems[5].getText());
+        userChoiceCourse = menuItems[5].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[5].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[5] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[5]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -266,7 +287,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -274,13 +297,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu7(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[6].getText();
-        removeMenuButton.setText(menuItems[6].getText());
+        userChoiceCourse = menuItems[6].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[6].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[6] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[6]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -289,7 +315,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -297,13 +325,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu8(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[7].getText();
-        removeMenuButton.setText(menuItems[7].getText());
+        userChoiceCourse = menuItems[7].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[7].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[7] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[7]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -312,7 +343,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -320,13 +353,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu9(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[8].getText();
-        removeMenuButton.setText(menuItems[8].getText());
+        userChoiceCourse = menuItems[8].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[8].getText()); // Display chosen course in menu button
 
+        // Display section options if more than 1 section exists
         if (coursesController.courseSectionsList[8] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[8]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -335,7 +371,9 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
@@ -343,13 +381,16 @@ public class courseRemoveController implements Initializable {
     @FXML
     protected void onRemoveMenu10(){
         removeCourseStatus.setVisible(false);
-        userChoiceCourse = menuItems[9].getText();
-        removeMenuButton.setText(menuItems[9].getText());
+        userChoiceCourse = menuItems[9].getText(); // User has chosen course 1
+        removeMenuButton.setText(menuItems[9].getText()); // Display chosen course in menu button
 
-        if (coursesController.courseSectionsList[9] > 1){
+        // Display section options if more than 1 section exists
+        if (coursesController.courseSectionsList[0] > 1){
             removeSectionMenu.setVisible(true);
+
+            // Display menu options
             sectionMenu[0].setVisible(true);
-            sectionMenu[0].setText("All");
+            sectionMenu[0].setText("All"); // First option is all
             for (int j = 1; j < 6; j++) {
                 if (j <= courseSectionsList[9]) {
                     sectionMenu[j].setText(String.valueOf(j));
@@ -358,11 +399,14 @@ public class courseRemoveController implements Initializable {
                     sectionMenu[j].setVisible(false);
                 }
             }
-        } else {
+        }
+        // Make sure menu is hidden if only 1 section
+        else {
             removeSectionMenu.setVisible(false);
         }
     }
 
+    // When the user chooses the section save their choice to userChoiceSection and display in menu button
     @FXML
     protected void onRemoveSectionMAll(){
         userChoiceSection = "0";
@@ -399,10 +443,14 @@ public class courseRemoveController implements Initializable {
         removeSectionMenu.setText("5");
     }
 
+    // Remove course
     @FXML
     protected void onRemoveCourseSubmitButton() {
+        // Find chosen course
         for (int i = 0; i < main.courses.length; i++){
-            if (userChoiceSection.equals("0") || userChoiceSection.isEmpty()) {
+            // Removing all sections
+            if (userChoiceSection == null || userChoiceSection.equals("0")) {
+                // Find and delete all sections with that name
                 for (int j = 0; j < main.courses.length; j++) {
                     if (userChoiceCourse.equals(main.courses[j].getCourseName())) {
                         wipeCourse(main.courses[j],1);
@@ -412,6 +460,7 @@ public class courseRemoveController implements Initializable {
                     }
                 }
             } else {
+                // Find chosen course and section and wipe
                 for (int j = 0; j < main.courses.length; j++) {
                     if (userChoiceCourse.equals(main.courses[j].getCourseName()) && userChoiceSection.equals(main.courses[j].getCourseSection())){
                         wipeCourse(main.courses[j],0);
@@ -422,6 +471,7 @@ public class courseRemoveController implements Initializable {
                 }
             }
 
+            // Reset course options
             for(int j = 0; j < 10; j++){
                 String currentCourseName = coursesController.courseNameList[j];
 
@@ -438,14 +488,10 @@ public class courseRemoveController implements Initializable {
 
         }
 
-        String test = "";
-        for(int i = 0; i < main.courses.length;i++){
-            test += main.courses[i].getCourseName() + " " + courseNameList[i] + " " + courseSectionsList[i] + "\n";
-        }
 
-        testText.setText(test);
     }
 
+    // Return to courses page
     @FXML
     protected void onRemoveCourseBackButton() throws IOException {
         Stage currentStage = (Stage) removeMenuButton.getScene().getWindow();

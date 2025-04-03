@@ -2,18 +2,18 @@ package com.example.templatemodule2.essential;
 
 public class course extends subject{
     public String name;
-    public String code;
+    public String subjectCode;
     public String sectionNumber;
-    public String  capacity;
+    public String capacity;
     public String lecTime; //formatted Day Hour:Min 24 hour time
     public String examDate;// /M/D/Y H:M w4 hour time
     public String location;
     public String teacher;
-    public static int courseCounter = 6;
+    public static int courseCounter = 11;
 
-
-    public course(String courseCode, String courseName, String section, String capacity, String lecture, String finalExam, String location, String teacher) {
-        this.code = courseCode;
+    // Course constructor
+    public course(String subjectCode, String courseName, String section, String capacity, String lecture, String finalExam, String location, String teacher) {
+        this.code = subjectCode;
         this.name = courseName;
         this.sectionNumber = section;
         this.capacity = capacity;
@@ -23,7 +23,7 @@ public class course extends subject{
         this.teacher = teacher;
     }
 
-
+    // Getter methods for all values
     public String getCourseName(){
         return name;
     }
@@ -57,7 +57,7 @@ public class course extends subject{
     }
 
 
-
+    // String of course info to display
     public String displayInfo() {
         String printer = "";
 
@@ -72,6 +72,7 @@ public class course extends subject{
         return printer;
     }
 
+    // String for just the info of a single section
     public String sectionInfo() {
         String printer = "";
 
@@ -85,17 +86,4 @@ public class course extends subject{
         return printer;
     }
 
-    /*
-    public void wipe () {
-        name = "";
-        code = "";
-        sectionNumber= "";
-        teacherName= "";
-        capacity= "";
-        lecTime= ""; //formatted Day Hour:Min 24 hour time
-        examDate= "";// /M/D/Y H:M 24 hour time
-        location= "";
-        teacher= "";
-    }
-     */
 }

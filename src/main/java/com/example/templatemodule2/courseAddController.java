@@ -1,21 +1,16 @@
 package com.example.templatemodule2;
 
-
 import com.example.templatemodule2.essential.course;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-//import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import java.net.URL;
-
 import java.io.IOException;
-import java.util.ResourceBundle;
 
 public class courseAddController {
+    // Create text boxes for all course parameters
     public TextField courseNameText;
     public TextField courseCodeText;
     public TextField capacityText;
@@ -24,26 +19,18 @@ public class courseAddController {
     public TextField teacherText;
     public TextField examText;
     public TextField roomNumberText;
+
+    // Initialize page buttons
     public Button submitCourseButton;
     public Button courseBackButton;
-    String name, code, section, teacher, lecture, exam,room;
-    String capacity;
 
+    // Define parameters
+    String name, code, section, teacher, lecture, exam,room, capacity;
 
-    /*
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        main.courses[0] = new course("1","Calculus 1","1","30","Mon/Wed 9-11AM", "2025-12-15 9:00", "101", "Dr. Alan Turing");
-        main.courses[1] = new course("2","Literature Basics", "1", "25","Tue/Wed 10-12PM", "2025-12-16 10:00", "102", "Prof. Emily Bronte");
-        main.courses[2] = new course("3", "Introduction to Programming", "1","42","Tue/Thu 12-2 PM", "2025-12-16 10:00", "102", "Prof. Bahar Nozari");
-        main.courses[3] = new course("4","Introduction to Chemistry", "1","50","Mon/Thu 3-4 PM","2025-12-14 4:00","201","Dr. Lucka Lucku");
-        main.courses[4] = new course("5","Introduction to French","1","25","Tue/Thur 4:30-5:30","2025-12-13 10:00","202","Dr. Lakyn Copeland");
-        main.courses[5] = new course("6","Water Resources","1","50","Mon/Fri 9:00-10:30 AM","2025-12-01 9:00", "203", "Dr. Albozr Gharabaghi");
-    }
-     */
-
+    // Add courses on submit
     @FXML
     protected void onSubmitCourseButton() {
+        // Get course parameters from text boxes
         name = courseNameText.getText();
         code = courseCodeText.getText();
         capacity = capacityText.getText();
@@ -53,11 +40,12 @@ public class courseAddController {
         exam = examText.getText();
         room = roomNumberText.getText();
 
-
+        // Create new course and add to list
         course addedCourse = new course(code,name,section,capacity,lecture,exam,room,teacher);
         main.courses[course.courseCounter] = addedCourse;
         course.courseCounter++;
 
+        // Set text back to blank
         courseNameText.setText("");
         courseCodeText.setText("");
         capacityText.setText("");
@@ -68,12 +56,7 @@ public class courseAddController {
         roomNumberText.setText("");
     }
 
-    /*
-    @FXML
-    public static ArrayList<Course> getCourseList(){
-        return courseList;
-    }*/
-
+    // Return to course page
     @FXML
     protected void onCourseBackButton() throws IOException {
         Stage currentStage = (Stage) courseNameText.getScene().getWindow();
